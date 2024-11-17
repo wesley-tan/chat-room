@@ -41,3 +41,11 @@ ok when i send a message, it should say who sent it.
 ok when i connect, i should get all the previous messages in the chat.
 
 i should also be able to enter a message, and it should say who sent it. 
+
+Right-align your own messages in blue
+Left-align other users' messages in gray
+Add a more modern input field with rounded corners
+Style the send button to match the iMessage aesthetic
+Show timestamps in a cleaner format
+Only show usernames for messages from others
+

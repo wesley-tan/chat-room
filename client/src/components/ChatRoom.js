@@ -62,7 +62,7 @@ function ChatRoom({ socket, username, setUsername }) {
               type="text"
               value={newMessage}
               onChange={(e) => setNewMessage(e.target.value)}
-              placeholder="Type your message..."
+              placeholder="Type a message..."
               className="message-input-field"
             />
             <button type="submit" className="send-button">

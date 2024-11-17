@@ -14,14 +14,15 @@ function MessageList({ messages, currentUser }) {
           key={index} 
           className={`message ${msg.username === currentUser ? 'message-own' : 'message-other'}`}
         >
-          <div className="message-content">
-            <div className="message-header">
-              <span className="message-username">{msg.username}</span>
-              <span className="message-time">
-                {new Date(msg.timestamp).toLocaleTimeString()}
-              </span>
-            </div>
-            <p className="message-text">{msg.content}</p>
+          {msg.username !== currentUser && (
+            <div className="message-username">{msg.username}</div>
+          )}
+          <div className="message-text">{msg.content}</div>
+          <div className="message-time">
+            {new Date(msg.timestamp).toLocaleTimeString([], { 
+              hour: 'numeric', 
+              minute: '2-digit'
+            })}
           </div>
         </div>
       ))}
